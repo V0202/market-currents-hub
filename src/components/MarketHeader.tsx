@@ -1,4 +1,5 @@
 import { TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const MarketHeader = () => {
   const indices = [
@@ -7,15 +8,33 @@ const MarketHeader = () => {
     { name: "NASDAQ", value: "15,074.57", change: "+1.23%", isPositive: true },
   ];
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <header className="border-b border-border bg-card/50 backdrop-blur-sm">
+    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("home")}>
             <TrendingUp className="h-8 w-8 text-primary" />
             <h1 className="text-2xl font-bold">MarketWatch</h1>
           </div>
-          <div className="hidden md:flex gap-6">
+          
+          <nav className="hidden md:flex items-center gap-6">
+            <Button variant="ghost" onClick={() => scrollToSection("home")}>
+              Home
+            </Button>
+            <Button variant="ghost" onClick={() => scrollToSection("markets")}>
+              Markets
+            </Button>
+            <Button variant="ghost" onClick={() => scrollToSection("charts")}>
+              Charts
+            </Button>
+          </nav>
+
+          <div className="hidden lg:flex gap-6">
             {indices.map((index) => (
               <div key={index.name} className="text-sm">
                 <div className="text-muted-foreground">{index.name}</div>
