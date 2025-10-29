@@ -19,7 +19,7 @@ const Index = () => {
           <div className="lg:col-span-2 space-y-6">
             <StockChart />
           </div>
-          <div className="lg:col-span-1">
+          <div id="watchlist" className="lg:col-span-1">
             <MarketOverview />
           </div>
         </div>
