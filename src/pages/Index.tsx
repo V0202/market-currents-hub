@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import LiveTicker from "@/components/LiveTicker";
 import StockChart from "@/components/StockChart";
 import MarketOverview from "@/components/MarketOverview";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -24,6 +26,9 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      <AboutSection />
+      <ContactSection />
     </div>
   );
 };

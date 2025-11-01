@@ -38,6 +38,12 @@ const MarketHeader = () => {
             <Button variant="ghost" onClick={() => scrollToSection("watchlist")}>
               Watchlist
             </Button>
+            <Button variant="ghost" onClick={() => scrollToSection("about")}>
+              About
+            </Button>
+            <Button variant="ghost" onClick={() => scrollToSection("contact")}>
+              Contact
+            </Button>
             <Button variant="default" className="ml-2">
               Sign In
             </Button>
@@ -111,6 +117,26 @@ const MarketHeader = () => {
               }}
             >
               Watchlist
+            </Button>
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start"
+              onClick={() => {
+                scrollToSection("about");
+                setMobileMenuOpen(false);
+              }}
+            >
+              About
+            </Button>
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start"
+              onClick={() => {
+                scrollToSection("contact");
+                setMobileMenuOpen(false);
+              }}
+            >
+              Contact
             </Button>
             <Button variant="default" className="w-full">
               Sign In
