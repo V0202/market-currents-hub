@@ -1,6 +1,7 @@
 import { ArrowRight, TrendingUp, LineChart, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import stockBg from "@/assets/stock-market-bg.jpg";
 
 const HeroSection = () => {
   const scrollToMarkets = () => {
@@ -28,8 +29,10 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+      {/* Background image */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${stockBg})` }} />
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/90" />
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
