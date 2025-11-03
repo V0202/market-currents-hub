@@ -19,7 +19,27 @@ const Index = () => {
       <main id="charts" className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
-            <StockChart />
+            <StockChart 
+              symbol="AAPL" 
+              name="Apple Inc." 
+              basePrice={150} 
+              change={2.45} 
+              changePercent={1.65} 
+            />
+            <StockChart 
+              symbol="TSLA" 
+              name="Tesla Inc." 
+              basePrice={245} 
+              change={-5.20} 
+              changePercent={-2.08} 
+            />
+            <StockChart 
+              symbol="GOOGL" 
+              name="Alphabet Inc." 
+              basePrice={138} 
+              change={3.85} 
+              changePercent={2.87} 
+            />
           </div>
           <div id="watchlist" className="lg:col-span-1">
             <MarketOverview />
