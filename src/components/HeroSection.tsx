@@ -32,7 +32,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${stockBg})` }} />
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/90" />
+      <div className="absolute inset-0 bg-black/70" />
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
